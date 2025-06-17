@@ -244,7 +244,7 @@ func (c *SSE) handleSSEEvent(event, data string) {
 			return
 		}
 		if endpoint.Host != c.baseURL.Host {
-			fmt.Printf("Endpoint origin does not match connection origin\n")
+			fmt.Printf("Endpoint origin does %q not match connection origin %q\n", endpoint.Host, c.baseURL.Host)
 			return
 		}
 		c.endpoint = endpoint
